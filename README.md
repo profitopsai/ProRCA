@@ -7,7 +7,7 @@
 Inspired by the paper:
 
 > **Beyond Traditional Problem-Solving: A Causal Pathway Approach for Complex Operational Environments**  
-> _Ahmed Dawoud & Shravan Talupula, February 9, 2025_ [📄 Download PDF](https://drive.google.com/file/d/1_2Q8imCKWEHL0eCi6unprvjv35rY7LtC/view?usp=sharing)
+> _Ahmed Dawoud & Shravan Talupula, February 9, 2025_ [📄 Download PDF](https://arxiv.org/abs/2503.01475)
 >
 > This work introduces a methodology that combines conditional anomaly scoring with causal path discovery and ranking. By extending the [DoWhy](https://github.com/py-why/dowhy) library, the framework provides decision-makers with actionable insights into the true source of complex operational disruptions.
 
