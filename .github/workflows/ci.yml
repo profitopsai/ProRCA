@@ -26,4 +26,4 @@ jobs:
 
       - name: Run tests
         run: |
-          echo "No tests yet. Add pytest in the next step!"
+          pytest tests/
