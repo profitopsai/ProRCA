@@ -34,17 +34,28 @@ Inspired by the paper:
 ## Project Structure
 
 ```
-ProRca/
-├── src/                  # Source code directory
-│   ├── __init__.py
-│   ├── anomaly.py
-│   ├── create_synthetic_data.py
-│   ├── pathway.py
-├── notebooks/            # Jupyter notebooks for demonstrations
-│   ├── test.ipynb
-├── README.md                 # Documentation
-├── .gitignore            # Git ignore file
-├── requirements.txt      # Dependencies list
+ProRCA/
+├── .gitignore
+├── .github/             (to be added in next step)
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── docs/
+│   ├── Examples/
+│   │   ├── Example_1/
+│   │   └── Example_2/
+│   └── research_paper/
+├── pyproject.toml
+├── src/
+│   └── prorca/
+│       ├── __init__.py
+│       ├── anomaly.py
+│       ├── create_synthetic_data.py
+│       ├── dag_builder.py
+│       ├── pathway.py
+│       └── __pycache__/  (ignored by .gitignore)
+├── dist/                (ignored by .gitignore)
 ```
 
 ## Installation
