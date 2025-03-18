@@ -36,7 +36,7 @@ Inspired by the paper:
 ```
 ProRCA/
 ├── .gitignore
-├── .github/             (to be added in next step)
+├── .github/
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -54,8 +54,6 @@ ProRCA/
 │       ├── create_synthetic_data.py
 │       ├── dag_builder.py
 │       ├── pathway.py
-│       └── __pycache__/  (ignored by .gitignore)
-├── dist/                (ignored by .gitignore)
 ```
 
 ## Installation
