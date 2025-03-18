@@ -2,6 +2,8 @@
 
 ## Overview
 
+![Build Status](https://github.com/profitopsai/ProRCA/actions/workflows/ci.yml/badge.svg)
+
 **ProRca** is an end-to-end framework for diagnosing anomalies in complex operational environments by uncovering multi-hop causal pathways. Unlike traditional anomaly detection methods that focus on correlations or feature importance (e.g., via SHAP), our approach leverages structural causal modeling to trace the full causal chain—from hidden root causes to observed anomalies.
 
 Inspired by the paper:
