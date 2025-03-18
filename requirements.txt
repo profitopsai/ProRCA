@@ -1,8 +1,0 @@
-dowhy
-networkx
-graphviz
-adtk
-matplotlib
-seaborn
-numpy
-pandas
