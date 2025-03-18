@@ -49,12 +49,16 @@ ProRCA/
 │   └── research_paper/
 ├── pyproject.toml
 ├── src/
+│   ├── anomaly/
+│   │   ├── __init__.py
+│   │   └── adtk.py
+│   ├── data_generators/
+│   │   ├── __init__.py
+│   │   └── synthetic_sales_data.py
 │   └── prorca/
 │       ├── __init__.py
-│       ├── anomaly.py
-│       ├── create_synthetic_data.py
 │       ├── dag_builder.py
-│       ├── pathway.py
+│       └── pathway.py
 ```
 
 ## Installation
@@ -94,7 +98,7 @@ df_anomalous = inject_anomalies_by_date(df, anomaly_schedule)
 ### 3. Detect Anomalies
 
 ```python
-from src.anomaly import AnomalyDetector
+from src.anomaly.adtk import AnomalyDetector
 
 detector = AnomalyDetector(df_anomalous, date_col="ORDERDATE", value_col="PROFIT_MARGIN")
 anomalies = detector.detect()
@@ -106,7 +110,7 @@ detector.visualize(figsize=(12, 6), ylim=(40, 60))
 ### 4. Build the Structural Causal Model (SCM)
 
 ```python
-from src.pathway import ScmBuilder
+from src.prorca.pathway import ScmBuilder
 
 edges = [
     ("PRICEEACH", "UNIT_COST"), ("PRICEEACH", "SALES"),
@@ -131,7 +135,7 @@ scm = builder.build(df_anomalous)
 ### 5. Perform Causal Root Cause Analysis
 
 ```python
-from src.pathway import CausalRootCauseAnalyzer
+from src.prorca.pathway import CausalRootCauseAnalyzer
 
 analyzer = CausalRootCauseAnalyzer(scm, min_score_threshold=0.8)
 results = analyzer.analyze(df_anomalous, anomaly_dates, start_node='PROFIT_MARGIN')
@@ -140,7 +144,7 @@ results = analyzer.analyze(df_anomalous, anomaly_dates, start_node='PROFIT_MARGI
 ### 6. Visualize Causal Pathways
 
 ```python
-from src.pathway import CausalResultsVisualizer
+from src.prorca.pathway import CausalResultsVisualizer
 
 visualizer = CausalResultsVisualizer(analysis_results=results)
 visualizer.plot_root_cause_paths()

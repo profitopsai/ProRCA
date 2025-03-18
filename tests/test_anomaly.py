@@ -1,5 +1,5 @@
 import pandas as pd
-from src.anomaly.adtk import AnomalyDetector
+from anomaly.adtk import AnomalyDetector
 
 
 def test_anomaly_detector():

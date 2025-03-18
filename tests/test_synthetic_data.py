@@ -1,4 +1,4 @@
-from src.data_generators.synthetic_sales_data import generate_fashion_data_with_brand
+from data_generators.synthetic_sales_data import generate_fashion_data_with_brand
 
 
 def test_generate_fashion_data():

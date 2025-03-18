@@ -3,8 +3,6 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-[project.optional-dependencies]
-dev = ["pytest>=7.0", "black>=23.0", "flake8>=6.0"]
 name = "prorca"
 version = "0.1.0"
 description = "ProRCA - Root Cause Analysis Tool"
@@ -28,5 +26,12 @@ dependencies = [
     "pandas"
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black>=23.0", "flake8>=6.0"]
+
 [project.urls]
 Repository = "https://github.com/profitopsai/ProRCA"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["prorca", "anomaly", "data_generators"]
