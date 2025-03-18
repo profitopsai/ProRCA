@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.cp311-win_amd64.pyd
+*.cpython-311.pyc
+*cp311-win*
+*.py[cod]
+*$py.class
+*.log
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.Python
+
+# Virtual Environment
+env/
+venv/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Project specific
+prorca/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Operating System
+.DS_Store
+Thumbs.db
