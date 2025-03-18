@@ -135,10 +135,9 @@ from src.pathway import CausalResultsVisualizer
 visualizer = CausalResultsVisualizer(analysis_results=results)
 visualizer.plot_root_cause_paths()
 ```
+![RCA Pathways](https://github.com/profitopsai/ProRCA/blob/master/research%20paper/results/output.png)
 
-## ![RCA Pathways](https://github.com/Economist-Ahmed-Dawoud/ProRca/blob/main/research paper/Results/output.png)
-
-![RCA Pathways](https://github.com/Economist-Ahmed-Dawoud/ProRca/blob/main/research paper/Results/Dates.png)
+![RCA Pathways](https://github.com/profitopsai/ProRCA/blob/master/research%20paper/results/Dates.png)
 
 ### 7. Run the End-to-End Example
 
