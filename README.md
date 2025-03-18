@@ -30,9 +30,6 @@ Inspired by the paper:
 - **Visualization:**  
   Visualize causal pathways with Graphviz diagrams, using gradient backgrounds to indicate path importance via `CausalResultsVisualizer`.
 
-- **End-to-End Example:**  
-  A complete example of the workflow is provided in the Jupyter Notebook `notebooks/test.ipynb`.
-
 ## Project Structure
 
 ```
@@ -63,9 +60,9 @@ ProRCA/
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/causal-rca.git
-cd causal-rca
-pip install -r requirements.txt
+git clone https://github.com/profitopsai/ProRCA.git
+cd ProRCA
+pip install .
 ```
 
 ## Usage
