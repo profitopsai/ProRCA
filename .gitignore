@@ -24,9 +24,6 @@ venv/
 # Jupyter Notebook
 .ipynb_checkpoints/
 
-# Project specific
-prorca/
-
 # VS Code
 .vscode/
 *.code-workspace
@@ -34,3 +31,4 @@ prorca/
 # Operating System
 .DS_Store
 Thumbs.db
+
