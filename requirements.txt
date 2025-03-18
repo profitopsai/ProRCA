@@ -4,3 +4,5 @@ graphviz
 adtk
 matplotlib
 seaborn
+numpy
+pandas
