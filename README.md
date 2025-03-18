@@ -1,4 +1,6 @@
 ![Build Status](https://github.com/profitopsai/ProRCA/actions/workflows/ci.yml/badge.svg)
+![PyPI](https://badge.fury.io/py/prorca.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 # ProRCA: A Causal Pathway Approach for Complex Operational Environments
 
