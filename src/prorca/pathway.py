@@ -1,17 +1,12 @@
 # pathway.py
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.cm import get_cmap
-import seaborn as sns
 import networkx as nx
-from datetime import datetime, timedelta
 from typing import Dict, List, Tuple
 
 import dowhy.gcm as gcm
 from dowhy.gcm.anomaly_scorers import MedianCDFQuantileScorer
-from dowhy.gcm import anomaly, StructuralCausalModel, attribute_anomalies
-from dowhy.gcm.auto import AssignmentQuality
+from dowhy.gcm import anomaly, attribute_anomalies
 
 from graphviz import Digraph
 from IPython.display import Image, display
@@ -132,6 +127,7 @@ class ScmBuilder:
             )
             print("Fitting the Structural Causal Model...")
             gcm.fit(self.scm, df)
+            print(auto_assignment_summary)
 
         return self.scm
 
@@ -263,7 +259,10 @@ class CausalRootCauseAnalyzer:
         all_paths = []
         visited = set()
         stack = [
-            (start_node, [(start_node, self._calculate_combined_score(start_node))])
+            (
+                start_node,
+                [(start_node, self._calculate_combined_score(start_node))],
+            )
         ]
 
         while stack:
@@ -302,7 +301,10 @@ class CausalRootCauseAnalyzer:
         return all_paths
 
     def analyze(
-        self, df_agg: pd.DataFrame, anomaly_dates, start_node: str = "PROFIT_MARGIN"
+        self,
+        df_agg: pd.DataFrame,
+        anomaly_dates,
+        start_node: str = "PROFIT_MARGIN",
     ) -> Dict:
         """
         Main analysis method combining all approaches.
@@ -337,7 +339,10 @@ class CausalRootCauseAnalyzer:
         }
 
     def analyze_by_date(
-        self, df_agg: pd.DataFrame, anomaly_dates, start_node: str = "PROFIT_MARGIN"
+        self,
+        df_agg: pd.DataFrame,
+        anomaly_dates,
+        start_node: str = "PROFIT_MARGIN",
     ) -> Dict:
         """
         Run the analysis separately for each anomaly date so that date-specific root causes are captured.

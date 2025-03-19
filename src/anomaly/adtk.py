@@ -71,7 +71,7 @@ class AnomalyDetector:
                 "Anomalies have not been detected yet. Please call detect() first."
             )
 
-        anomaly_dates = self.anomalies[self.anomalies["is_anamoly"] == True].index
+        anomaly_dates = self.anomalies[self.anomalies["is_anamoly"]].index
 
         return pd.Series(anomaly_dates, name=anomaly_dates.name)
 
@@ -115,7 +115,7 @@ class AnomalyDetector:
         )
 
         # Highlight the anomaly points.
-        anomaly_points = self.anomalies[self.anomalies["is_anamoly"] == True]
+        anomaly_points = self.anomalies[self.anomalies["is_anamoly"]]
         plt.scatter(
             anomaly_points.index,
             anomaly_points["value"],
