@@ -43,9 +43,7 @@ product_code_counter = 1
 for category, details in product_line_hierarchy.items():
     for brand in details["brands"]:
         for hierarchy in details["hierarchies"]:
-            product_code_mapping[(brand, hierarchy)] = (
-                f"P-{product_code_counter:04}"
-            )
+            product_code_mapping[(brand, hierarchy)] = f"P-{product_code_counter:04}"
             product_code_counter += 1
 
 # Define sales channels
@@ -123,9 +121,7 @@ shipping_threshold = 100.0
 shipping_fee_per_unit = 3.0
 
 
-def calculate_discount(
-    sales, promo_code, category, sales_channel, customer_loyalty
-):
+def calculate_discount(sales, promo_code, category, sales_channel, customer_loyalty):
     """
     Calculate discount based on promo code, adjusted by category, channel, and loyalty.
     Ensures discount doesn't exceed sales.
@@ -153,9 +149,7 @@ def calculate_discount(
     return round(min(sales * discount_rate, sales), 2)
 
 
-def calculate_fulfillment_cost(
-    quantity, sales_channel, territory, product_weight
-):
+def calculate_fulfillment_cost(quantity, sales_channel, territory, product_weight):
     """
     Calculate fulfillment cost based on quantity, channel, territory, and weight.
     """
@@ -211,19 +205,13 @@ def generate_fashion_data_with_brand(start_date, end_date):
                     2,
                 )
                 price = max(price_range[0], min(price, price_range[1]))
-                unit_cost_ratio = np.random.uniform(
-                    *unit_cost_ratios[mapped_category]
-                )
+                unit_cost_ratio = np.random.uniform(*unit_cost_ratios[mapped_category])
                 unit_cost = round(price * unit_cost_ratio, 2)
-                quantity = max(
-                    1, np.random.poisson(quantity_lambdas[mapped_category])
-                )
+                quantity = max(1, np.random.poisson(quantity_lambdas[mapped_category]))
                 sales = round(price * quantity, 2)
                 sales_channel = np.random.choice(sales_channels_realistic)
                 promo_code = np.random.choice(promo_codes)
-                customer_loyalty = np.random.choice(
-                    ["New", "Loyal"], p=[0.6, 0.4]
-                )
+                customer_loyalty = np.random.choice(["New", "Loyal"], p=[0.6, 0.4])
                 discount = calculate_discount(
                     sales,
                     promo_code,
@@ -242,16 +230,10 @@ def generate_fashion_data_with_brand(start_date, end_date):
                 )
                 marketing_cost = round(
                     np.random.uniform(1, 5)
-                    * (
-                        1.5
-                        if mapped_category == "Beauty & Personal Care"
-                        else 1.0
-                    ),
+                    * (1.5 if mapped_category == "Beauty & Personal Care" else 1.0),
                     2,
                 )
-                return_cost = round(
-                    net_sales * return_rates[mapped_category], 2
-                )
+                return_cost = round(net_sales * return_rates[mapped_category], 2)
                 cost_of_goods_sold = round(unit_cost * quantity, 2)
                 shipping_revenue = (
                     0.0
@@ -268,9 +250,7 @@ def generate_fashion_data_with_brand(start_date, end_date):
                     2,
                 )
                 profit_margin = (
-                    round((profit / net_sales) * 100, 2)
-                    if net_sales > 0
-                    else 0
+                    round((profit / net_sales) * 100, 2) if net_sales > 0 else 0
                 )
                 is_margin_negative = profit < 0
                 if profit_margin < -100:
@@ -285,9 +265,7 @@ def generate_fashion_data_with_brand(start_date, end_date):
                 year_id = date.year
                 postal_code = np.random.randint(10000, 99999)
                 last_name = np.random.choice(["Smith", "Doe", "Brown", "Lee"])
-                first_name = np.random.choice(
-                    ["John", "Jane", "Emily", "Chris"]
-                )
+                first_name = np.random.choice(["John", "Jane", "Emily", "Chris"])
                 address_line1 = np.random.choice(
                     ["123 Main St", "456 Elm St", "789 Maple Ave"]
                 )
@@ -355,9 +333,7 @@ def inject_anomalies_by_date(df, anomaly_schedule):
         if scope in sales_channels_realistic:
             mask = date_mask & (df["SALES_CHANNEL"] == scope)
         else:
-            mask = date_mask & df["MERCHANDISE_HIERARCHY"].str.startswith(
-                scope
-            )
+            mask = date_mask & df["MERCHANDISE_HIERARCHY"].str.startswith(scope)
 
         if not df[mask].empty:
             df.loc[mask, "ANOMALY_TYPE"] = anomaly_type
@@ -418,9 +394,7 @@ def inject_anomalies_by_date(df, anomaly_schedule):
             ).round(2)
             df.loc[mask, "PROFIT_MARGIN"] = np.where(
                 df.loc[mask, "NET_SALES"] > 0,
-                (
-                    df.loc[mask, "PROFIT"] / df.loc[mask, "NET_SALES"] * 100
-                ).round(2),
+                (df.loc[mask, "PROFIT"] / df.loc[mask, "NET_SALES"] * 100).round(2),
                 0,
             )
             df.loc[mask, "IS_MARGIN_NEGATIVE"] = df.loc[mask, "PROFIT"] < 0
