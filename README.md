@@ -2,7 +2,7 @@
 ![PyPI](https://badge.fury.io/py/prorca.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-![Logo](https://i.postimg.cc/HsdH7GFs/Generated-Image-March-19-2025-2-55-AM-png.jpg)
+![Logo](https://freeimage.host/i/3xhHmfs)
 
 # ProRCA: A Causal Pathway Approach for Complex Operational Environments
 
