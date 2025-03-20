@@ -1,6 +1,7 @@
 ![Build Status](https://github.com/profitopsai/ProRCA/actions/workflows/ci.yml/badge.svg)
 ![PyPI](https://badge.fury.io/py/prorca.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Documentation Status](https://readthedocs.org/projects/prorca/badge/?version=latest)](https://prorca.readthedocs.io/en/latest/?badge=latest)
 
 ![Logo](https://i.postimg.cc/L87fQdGG/Final-Logo.jpg)
 
