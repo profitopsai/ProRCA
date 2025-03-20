@@ -27,7 +27,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.0", "black>=23.0", "flake8>=6.0"]
+dev = [
+    "pytest>=6.2",
+    "black>=22.3",
+    "flake8>=4.0",
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=1.0",
+    "myst-parser>=0.18",  # Add this line
+]
 
 [project.urls]
 Repository = "https://github.com/profitopsai/ProRCA"
