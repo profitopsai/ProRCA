@@ -21,6 +21,7 @@ env/
 venv/
 .env
 prorca_env/
+test-env/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
