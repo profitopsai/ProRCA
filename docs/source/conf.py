@@ -19,12 +19,12 @@ extensions = [
 ]
 
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_book_theme"
 
 project = "ProRCA"
 copyright = "2025, Ahmed Dawoud"
 author = "Ahmed Dawoud"
-release = "0.1.0"
+release = "0.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -39,3 +39,10 @@ exclude_patterns = []
 
 
 html_static_path = ["_static"]
+
+
+html_theme_options = {
+    "repository_url": "https://github.com/profitopsai/ProRCA",
+    "use_repository_button": True,
+    "primary_color": "#1e3a8a",  # A blue from the ProRCA logo
+}

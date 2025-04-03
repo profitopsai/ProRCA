@@ -27,11 +27,10 @@ ProRCA empowers you to move from simply detecting anomalies to truly understandi
 
 -   **Visualize Causal Stories:** Complex findings become clear insights. ProRCA generates intuitive diagrams of the discovered causal pathways, making it easy to see the chain of events, understand the flow of influence, and communicate exactly where the problem started.
 
-
+Contents
+----------------
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
-
    installation
    usage
    api
