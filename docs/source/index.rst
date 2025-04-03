@@ -23,14 +23,18 @@ ProRCA empowers you to move from simply detecting anomalies to truly understandi
 
 -   **Map Your System's Causal DNA:** Go beyond black boxes. Explicitly define and model the cause-and-effect relationships within your operations using Structural Causal Models (SCMs). This captures the real logic of how different parts of your system influence each other.
 
--   **Uncover the Real Root Causes:** This is where ProRCA shines. Move past simple correlations and discover the *actual* causal pathways leading to anomalies. Our analysis traces disruptions back through multiple steps (multi-hop paths) in your system, uniquely combining structural knowledge with noise pattern analysis to pinpoint the true origins.
+-   **Uncover the *Real* Root Causes:** This is where ProRCA shines. Move past simple correlations and discover the *actual* causal pathways leading to anomalies. Our analysis traces disruptions back through multiple steps (multi-hop paths) in your system, uniquely combining structural knowledge with noise pattern analysis to pinpoint the true origins.
 
 -   **Visualize Causal Stories:** Complex findings become clear insights. ProRCA generates intuitive diagrams of the discovered causal pathways, making it easy to see the chain of events, understand the flow of influence, and communicate exactly where the problem started.
 
+
 Contents
-----------------
+--------
+
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
+
    installation
    usage
    api
