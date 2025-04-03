@@ -20,20 +20,13 @@ Inspired by the paper:
 
 ## Features
 
-- **Anomaly Detection:**  
-  Detect anomalies in time series data using ADTK’s `InterQuartileRangeAD` via the `AnomalyDetector` class.
+*   **Pinpoint Critical Anomalies:** Don't just find outliers; identify the significant operational hiccups in your time series data that truly matter. ProRCA uses robust detection methods to flag the starting points for your investigation.
 
-- **Synthetic Data Generation:**  
-  Generate realistic synthetic transactional data with adjustable parameters using `create_synthetic_data.py`.
+*   **Map Your System's Causal DNA:** Go beyond black boxes. Explicitly define and model the cause-and-effect relationships within your operations using Structural Causal Models (SCMs). This captures the real logic of how different parts of your system influence each other.
 
-- **Structural Causal Modeling:**  
-  Build a causal graph and fit a Structural Causal Model (SCM) using `ScmBuilder` in the `pathway.py` module.
+*   **Uncover the *Real* Root Causes:** This is where ProRCA shines. Move past simple correlations and discover the *actual* causal pathways leading to anomalies. Our analysis traces disruptions back through multiple steps (multi-hop paths) in your system, uniquely combining structural knowledge with noise pattern analysis to pinpoint the true origins.
 
-- **Causal Root Cause Analysis:**  
-  Discover and rank multi-hop causal pathways using `CausalRootCauseAnalyzer`, which combines structural and noise-based anomaly scoring.
-
-- **Visualization:**  
-  Visualize causal pathways with Graphviz diagrams, using gradient backgrounds to indicate path importance via `CausalResultsVisualizer`.
+*   **Visualize Causal Stories:** Complex findings become clear insights. ProRCA generates intuitive diagrams of the discovered causal pathways, making it easy to see the chain of events, understand the flow of influence, and communicate exactly where the problem started.
 
 ## Project Structure
 
