@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "profitops-rca"
-version = "0.1.0"
+version = "0.01"
 description = "ProRCA - Root Cause Analysis Tool"
 authors = [{ name = "Ahmed Dawoud", email = "adawoud@profitops.ai"}]
 readme = "README.md"

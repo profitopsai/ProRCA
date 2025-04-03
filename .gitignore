@@ -22,9 +22,11 @@ venv/
 .env
 prorca_env/
 test-env/
+test_package/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+test_package.ipynb
 
 # VS Code
 .vscode/
