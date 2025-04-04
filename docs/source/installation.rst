@@ -1,64 +1,31 @@
 Installation
 ============
 
-To get started with ProRCA, follow these steps to clone the repository and install the required dependencies.
+Getting ProRCA installed is straightforward using pip.
 
-Prerequisites
--------------
+Install from PyPI
+-----------------
 
-- Python 3.7 or higher
-- Git
-- pip (Python package manager)
-
-Steps
------
-
-1. **Clone the Repository**
-
-   Clone the ProRCA repository from GitHub:
-
-   .. code-block:: bash
-
-      git clone https://github.com/profitopsai/ProRCA.git
-      cd ProRCA
-
-2. **Install Dependencies**
-
-   Install the package and its dependencies using pip:
-
-   .. code-block:: bash
-
-      pip install .
-
-   This will install all required dependencies listed in ``pyproject.toml``, including:
-
-   - dowhy
-   - networkx
-   - graphviz
-   - adtk
-   - matplotlib
-   - seaborn
-   - numpy
-   - pandas
-
-3. **Verify Installation**
-
-   To confirm that ProRCA is installed correctly, run the following Python command:
-
-   .. code-block:: python
-
-      import prorca
-      print(prorca.__version__)
-
-   You should see the version number (e.g., ``0.1.0``).
-
-Optional: Development Dependencies
-----------------------------------
-
-If you plan to contribute to ProRCA, you can install additional development dependencies:
+The recommended way to install ProRCA is directly from the Python Package Index (PyPI):
 
 .. code-block:: bash
 
-   pip install .[dev]
+   pip install profitops-rca
 
-This includes tools like ``pytest``, ``black``, and ``flake8`` for testing and linting.
+This command will download and install ProRCA along with all its required dependencies.
+
+For Development
+---------------
+
+If you intend to contribute to ProRCA or want to install it directly from the source code after cloning the repository, you can install it with the optional development dependencies:
+
+.. code-block:: bash
+
+   # First, clone the repository (if you haven't already)
+   git clone https://github.com/profitopsai/ProRCA.git
+   cd ProRCA
+
+   # Then install in editable mode with dev extras
+   pip install -e .[dev]
+
+This includes tools like ``pytest``, ``black``, and ``flake8`` needed for development and testing.

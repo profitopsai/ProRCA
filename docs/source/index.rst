@@ -33,11 +33,10 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: outline:
 
    installation
    usage
-   api
+   datagen
    examples
-   contributing
-   changelog
+   api
